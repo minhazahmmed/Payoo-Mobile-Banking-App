@@ -47,32 +47,32 @@
             <p class="text-[16px] text-[#08080870]">Enjoy easy and convenient financial services with us. Cashout charge is low and affordable </p>
         </div>
         <div class="mt-2 grid grid-cols-3 gap-4 mb-3">
-            <div class="p-5 border-2 border-gray-300 text-center rounded-xl ">
+            <div class="p-5 border-2 border-gray-300 text-center rounded-xl cursor-pointer" id="add-money-button">
                 <img src="assets/wallet1.png" alt="" class="mx-auto">
                 <h2>Add Money</h2>
             </div>
 
-             <div class="p-5 border-2 border-gray-300 text-center rounded-xl">
+             <div class="p-5 border-2 border-gray-300 text-center rounded-xl  cursor-pointer" id="cash-out-button">
                 <img src="assets/send1.png" alt="" class="mx-auto">
                 <h2>Cashout</h2>
             </div>
 
-             <div class="p-5 border-2 border-gray-300 text-center rounded-xl">
+             <div class="p-5 border-2 border-gray-300 text-center rounded-xl  cursor-pointer"> 
                 <img src="assets/money1.png" alt="" class="mx-auto">
                 <h2>Transfer Money</h2>
             </div>
 
-             <div class="p-5 border-2 border-gray-300 text-center rounded-xl">
+             <div class="p-5 border-2 border-gray-300 text-center rounded-xl  cursor-pointer">
                 <img src="assets/bonus1.png" alt="" class="mx-auto">
                 <h2>Get Bonus</h2>
             </div>
 
-             <div class="p-5 border-2 border-gray-300 text-center rounded-xl">
+             <div class="p-5 border-2 border-gray-300 text-center rounded-xl  cursor-pointer"> 
                 <img src="assets/purse1.png" alt="" class="mx-auto">
                 <h2>Pay Bill</h2>
             </div>
 
-             <div class="p-5 border-2 border-gray-300 text-center rounded-xl">
+             <div class="p-5 border-2 border-gray-300 text-center rounded-xl cursor-pointer"> 
                 <img src="assets/transaction1.png" alt="" class="mx-auto">
                 <h2>Transactions</h2>
             </div>
@@ -84,8 +84,10 @@
      <!-- section-2 end -->
 
      <!-- section-3 start -->
-      <section class="max-w-lg mx-auto">
-        <h1 class="text-[18px] font-semibold text-[#080808] ml-3 my-4">Add Money</h1>
+      <section class="all-form-section max-w-lg mx-auto">
+        <!-- Add money section -->
+        <div id="add-money-parent">
+            <h1 class="text-[18px] font-semibold text-[#080808] ml-3 my-4">Add Money</h1>
 
         <div class="bg-white p-6 rounded-2xl">
             <form>
@@ -120,6 +122,41 @@
               
             </form>
         </div>
+
+
+        </div>
+
+        <!-- Cashout section -->
+         <div id="cash-out-parent" style="display:none">
+            <h1 class="text-[18px] font-semibold text-[#080808] ml-3 my-4">Cash Out</h1>
+
+        <div class="bg-white p-6 rounded-2xl">
+            <form>
+         
+                <div>
+                    <h1 class="text-[16px] font-semibold text-[#08080895] my-2">Agent Number</h1>
+                    <input type="text" placeholder="Enter 11 digit number" class="input bg-[#F4F5F7] rounded-3xl w-full h-[52px]"  />
+                </div>
+
+                <div>
+                    <h1 class="text-[16px] font-semibold text-[#08080890] my-2">Amount</h1>
+                    <input type="text" placeholder="Enter amount to withdraw" class="input bg-[#F4F5F7] rounded-3xl w-full h-[52px]"  />
+                </div>
+
+                <div>
+                    <h1 class="text-[16px] font-semibold text-[#08080890] my-2">Pin Number</h1>
+                    <input type="text" placeholder="Enter 4 digit pin number" class="input bg-[#F4F5F7] rounded-3xl w-full h-[52px]"  />
+                </div>
+
+
+                 <button class="btn btn-primary w-full rounded-3xl bg-[#0874F2] border-none text-[20px] font-semibold p-6 my-4" >Withdraw Money</button>
+              
+            </form>
+        </div>
+
+
+         </div>
+        
       </section>
 
       <script src="home.js"></script>
