@@ -1,5 +1,4 @@
-
-
+// Add money feature
 const validPin = 1234;
 document.getElementById('add-money-btn')
 .addEventListener('click',function(e){
@@ -26,6 +25,52 @@ document.getElementById('add-money-btn')
   document.getElementById('main-balance').innerText = sumBalance;
 
 })
+
+// Cash out feature
+document.getElementById("cash-out-btn")
+.addEventListener("click", function(e){
+  e.preventDefault();
+ const withdrawAmount = parseInt(document.getElementById("withdraw-amount").value);
+ const mainBalance = parseInt(document.getElementById('main-balance').innerText);
+const agentNumber = document.getElementById("agent-number").value;
+const pinNumberCashOut = parseInt(document.getElementById('pin-number-cashout').value);
+
+if(agentNumber.length<11){
+  alert("Please provide valid agent number");
+  return;
+}
+
+if(pinNumberCashOut!==validPin){
+    alert("Please provide a valid pin number");
+    return;
+}
+
+ 
+
+ const withdrawCalc = mainBalance - withdrawAmount;
+
+ document.getElementById("main-balance").innerText = withdrawCalc;
+
+
+  
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Toggling feature
 
