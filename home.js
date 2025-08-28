@@ -1,16 +1,44 @@
-// Add money feature
 const validPin = 1234;
+
+// function to get input values
+function getInputValueNumber(id){
+  const inputField = document.getElementById(id);
+  const inputFieldValue = inputField.value;
+  const inputFieldValueNumber = parseInt(inputFieldValue);
+  return inputFieldValueNumber;
+
+}
+
+function getInputValue(id){
+  const inputField = document.getElementById(id);
+  const inputFieldValue = inputField.value;
+  return inputFieldValue;
+}
+
+// function to get inner text
+
+function getInnerText(id){
+  const element = document.getElementById(id);
+  const elementValue = element.innerText;
+  const elementValueNumber = parseInt(elementValue);
+  return elementValueNumber;
+}
+
+
+
+// Add money feature
+
 document.getElementById('add-money-btn')
 .addEventListener('click',function(e){
     e.preventDefault();
-  const bankSelect = document.getElementById('bank').value;
-  const accountNumber = document.getElementById('account-number').value;
-  const amount = parseInt(document.getElementById('amount').value);
-  const pinNumber = parseInt(document.getElementById('pin-number').value);
+  const bankSelect = getInputValue('bank');
+  const accountNumber = getInputValue('account-number');
+  const amount = getInputValueNumber('amount');
+  const pinNumber = getInputValueNumber('pin-number');
  
-  const mainBalance = parseInt(document.getElementById('main-balance').innerText);
+  const mainBalance = getInnerText("main-balance");
 
-  if(accountNumber.length<11){
+  if(accountNumber.length<11 || accountNumber.length>11){
     alert("Please provide valid account number");
     return;
   }
@@ -30,12 +58,16 @@ document.getElementById('add-money-btn')
 document.getElementById("cash-out-btn")
 .addEventListener("click", function(e){
   e.preventDefault();
- const withdrawAmount = parseInt(document.getElementById("withdraw-amount").value);
- const mainBalance = parseInt(document.getElementById('main-balance').innerText);
-const agentNumber = document.getElementById("agent-number").value;
-const pinNumberCashOut = parseInt(document.getElementById('pin-number-cashout').value);
+ const withdrawAmount = getInputValueNumber('withdraw-amount');
+ const mainBalance = getInnerText("main-balance");
+const agentNumber = getInputValue('agent-number');
+const pinNumberCashOut = getInputValueNumber('pin-number-cashout');
 
-if(agentNumber.length<11){
+
+const withdrawCalc = mainBalance - withdrawAmount;
+
+
+if(agentNumber.length<11 || agentNumber.length>11){
   alert("Please provide valid agent number");
   return;
 }
@@ -46,10 +78,13 @@ if(pinNumberCashOut!==validPin){
 }
 
  
-
- const withdrawCalc = mainBalance - withdrawAmount;
+if(withdrawCalc < 0){
+  alert("Sorry!! You have insufficient balance");
+  return;
+ }
 
  document.getElementById("main-balance").innerText = withdrawCalc;
+ 
 
 
   
