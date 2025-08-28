@@ -47,6 +47,7 @@
             <p class="text-[16px] text-[#08080870]">Enjoy easy and convenient financial services with us. Cashout charge is low and affordable </p>
         </div>
         <div class="mt-2 grid grid-cols-3 gap-4 mb-3">
+
             <div class="p-5 border-2 border-gray-300 text-center rounded-xl cursor-pointer" id="add-money-button">
                 <img src="assets/wallet1.png" alt="" class="mx-auto">
                 <h2>Add Money</h2>
@@ -57,22 +58,22 @@
                 <h2>Cashout</h2>
             </div>
 
-             <div class="p-5 border-2 border-gray-300 text-center rounded-xl  cursor-pointer"> 
+             <div class="p-5 border-2 border-gray-300 text-center rounded-xl  cursor-pointer" id="transfer-money-button" > 
                 <img src="assets/money1.png" alt="" class="mx-auto">
                 <h2>Transfer Money</h2>
             </div>
 
-             <div class="p-5 border-2 border-gray-300 text-center rounded-xl  cursor-pointer">
+             <div class="p-5 border-2 border-gray-300 text-center rounded-xl  cursor-pointer" id="get-bonus-button" >
                 <img src="assets/bonus1.png" alt="" class="mx-auto">
                 <h2>Get Bonus</h2>
             </div>
 
-             <div class="p-5 border-2 border-gray-300 text-center rounded-xl  cursor-pointer"> 
+             <div class="p-5 border-2 border-gray-300 text-center rounded-xl  cursor-pointer" id="pay-bill-button"> 
                 <img src="assets/purse1.png" alt="" class="mx-auto">
                 <h2>Pay Bill</h2>
             </div>
 
-             <div class="p-5 border-2 border-gray-300 text-center rounded-xl cursor-pointer"> 
+             <div class="p-5 border-2 border-gray-300 text-center rounded-xl cursor-pointer" id="transaction-button"> 
                 <img src="assets/transaction1.png" alt="" class="mx-auto">
                 <h2>Transactions</h2>
             </div>
@@ -86,7 +87,7 @@
      <!-- section-3 start -->
       <section class="all-form-section max-w-lg mx-auto">
         <!-- Add money section -->
-        <div id="add-money-parent">
+        <div id="add-money-parent" class="form">
             <h1 class="text-[18px] font-semibold text-[#080808] ml-3 my-4">Add Money</h1>
 
         <div class="bg-white p-6 rounded-2xl">
@@ -127,7 +128,7 @@
         </div>
 
         <!-- Cashout section -->
-         <div id="cash-out-parent" style="display:none">
+         <div id="cash-out-parent" style="display:none" class="form">
             <h1 class="text-[18px] font-semibold text-[#080808] ml-3 my-4">Cash Out</h1>
 
         <div class="bg-white p-6 rounded-2xl">
@@ -156,6 +157,30 @@
 
 
          </div>
+
+          <!-- Transfer Money section -->
+         <div id="transfer-money-parent" style="display:none" class="form">
+            <h1 class="text-[18px] font-semibold text-[#080808] ml-3 my-4">Transfer Money</h1>
+
+          </div>
+
+          <!-- Get Bonus Section -->
+           <div id="get-bonus-parent" style="display:none" class="form">
+            <h1 class="text-[18px] font-semibold text-[#080808] ml-3 my-4">Get Bonus</h1>
+
+          </div> 
+
+          <!-- Pay Bill Section -->
+           <div id="pay-bill-parent" style="display:none" class="form">
+            <h1 class="text-[18px] font-semibold text-[#080808] ml-3 my-4">Pay Bill</h1>
+
+          </div> 
+
+          <!-- Transaction Section -->
+           <div id="transaction-parent" style="display:none" class="form">
+            <h1 class="text-[18px] font-semibold text-[#080808] ml-3 my-4">Transaction History</h1>
+
+          </div> 
         
       </section>
 

@@ -24,7 +24,24 @@ function getInnerText(id){
   return elementValueNumber;
 }
 
+// function to set inner Text
 
+function setInnerText(value){
+  
+  const availableBalance = document.getElementById('main-balance');
+  availableBalance.innerText = value;
+  return availableBalance;
+}
+
+// function to handle toogle
+
+function handleToggle(id){
+const forms = document.getElementsByClassName("form");
+for(const form of forms){
+  form.style.display = 'none';
+}
+ document.getElementById(id).style.display = 'block';
+}
 
 // Add money feature
 
@@ -49,8 +66,8 @@ document.getElementById('add-money-btn')
   }
 
   const sumBalance = amount + mainBalance;
-   
-  document.getElementById('main-balance').innerText = sumBalance;
+  
+  setInnerText(sumBalance);
 
 })
 
@@ -83,43 +100,53 @@ if(withdrawCalc < 0){
   return;
  }
 
- document.getElementById("main-balance").innerText = withdrawCalc;
+ setInnerText(withdrawCalc);
  
-
-
-  
-
 })
 
 
 
+// Toggling feature----------------------------|
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Toggling feature
+// add money toggle
 
 document.getElementById("add-money-button")
 .addEventListener("click", function(){
-  document.getElementById("cash-out-parent").style.display = 'none';
-  document.getElementById("add-money-parent").style.display = 'block';
+
+ handleToggle("add-money-parent")
 
 })
 
+// cash out toggle
+
 document.getElementById("cash-out-button")
 .addEventListener("click", function(){
-  document.getElementById("add-money-parent").style.display = 'none';
-  document.getElementById("cash-out-parent").style.display = 'block';
+
+  handleToggle('cash-out-parent');
  
-  
+})
+
+// transfer money toggle
+
+document.getElementById('transfer-money-button')
+.addEventListener('click', function(){
+  handleToggle('transfer-money-parent');
+})
+
+// get bonus toggle
+document.getElementById('get-bonus-button')
+.addEventListener('click', function(){
+  handleToggle('get-bonus-parent');
+})
+
+//pay bill toggle
+document.getElementById('pay-bill-button')
+.addEventListener('click', function(){
+  handleToggle('pay-bill-parent');
+})
+
+//transaction toggle
+document.getElementById('transaction-button')
+.addEventListener('click', function(){
+  handleToggle('transaction-parent');
 })
